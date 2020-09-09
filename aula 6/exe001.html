@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //##### EXEMPLO 1 ################
+        /*var nomeAluno = "H1";
+        var quantidadeRepeticoes = 10;
+        var valorAtual = 1;
+        //enquanto o valor atual (comeca em 1) é menor ou igual quantidade (10)
+        //escrever o nome
+        while (valorAtual <= quantidadeRepeticoes) {
+            console.log(`Repeticao número ${valorAtual} Meu nome é ${nomeAluno}`);
+            valorAtual++;
+        }*/
+        //##### EXEMPLO 2 ################
+        /*var tabuadaNumero = 9;
+        var numeroAtual = 1;
+        var numeroMaximo = 9;
+        while (numeroAtual <= numeroMaximo) {
+            console.log(`${numeroAtual} x ${tabuadaNumero} = ${numeroAtual * tabuadaNumero}`);
+            numeroAtual++;//incremento numeroAtual = numeroAtual + 1;
+        } //LOOP INFINITO --> WHILE PRA SEMPRE
+        */
+        //  ENQUANTO -- enquanto uma condição for verdadeira ele repete
+        //  parar quando achar um false.
+        //quando você não uma quantidade explicita de interações
+        //definidas
+        //SINTAXE DO ENQUANTO 
+        //WHILE (CONDICAO ){
+        // O QUE EU QUERO REPETIR    
+        //}
+       /*var totalRepeticoes = 100;//fim
+        var repeticaoAtual = 1;//inicio
+        while(repeticaoAtual <= totalRepeticoes){
+            //repetir 100x
+            console.log(`Meu nome é h1`);
+            repeticaoAtual= repeticaoAtual + 1;//proxima INCREMENTO
+            //repeticaoAtual++;
+            //loop infinito
+        }*/
+        // PARA - for usado para fazer repetições
+        // FOR SINTAXE : verbosa
+        // for (onde eu comeco?; onde eu termino? ; como eu vou andar?)
+        //for(condicao inicial; condicao de parada;passo frente ou para tras  )
+        /*var totalRepeticoes = 100;
+        for(var repeticaoAtual = 1;repeticaoAtual <= totalRepeticoes; repeticaoAtual++){
+            console.log(`${repeticaoAtual} - Meu nome é h1`);
+        }*/
+        //acumular valores
+      /*  var totalDeAlunos = 3;
+        var alunoAtual=1;
+        var somaDasIdades = 0;//acumulador 
+        var idadeAlunoAtual=0;
+        while(alunoAtual<=totalDeAlunos){
+            idadeAlunoAtual = window.prompt("Qual a sua idade?");
+            //considera texto + em um texto concatenação
+            //conversão de string para int 
+           // somaDasIdades = somaDasIdades + parseInt(idadeAlunoAtual);
+            somaDasIdades += parseInt(idadeAlunoAtual);//mesmo do de cima 
+            console.log(`${somaDasIdades}`);
+            alunoAtual++; // alunoAtual = alunoAtual + 1;
+        }*/
+        /*EXERCICIO 1 */
+        /*var soma = 0;
+        var inicio = 2;
+        var termino = 100;
+        while(inicio  <= termino){
+            console.log(`${inicio}`);
+            soma = soma + inicio;
+            inicio = inicio + 2;
+        }
+        console.log(`Soma final é ${soma}`);*/
+        /*EXERCICIO 2*/
+     /*   var somaDasIdadesAnos = 0;
+        var idadeDigitadaAnos = 0;
+        var totalIdadesDigitadas = 3;
+        var contador=1;
+        while ( contador  <= totalIdadesDigitadas ){ 
+            idadeDigitadaAnos = window.prompt("Digite a sua idade?");
+            somaDasIdadesAnos = somaDasIdadesAnos + parseInt(idadeDigitadaAnos);      
+            contador++;      
+        }        
+        console.log(`Media de idade ${somaDasIdadesAnos/3}`);
+        */
+            /*EXERCICIO 3*/
+        /*var n = window.prompt("Digite um valor N?");
+        var soma = 0;
+        for(contador = 1; contador<= n; contador++){
+            soma += contador;
+        }
+        console.log(`${soma}`);*/
+
+        var valorSaque = 60;
+        var numeroNotasCem = 0;
+        var numeroNotasCinquenta =0;
+        var numeroNotasVinte = 0;
+        var resto = 0;
+        //disponiveis 100, 50 e 20 
+        if(valorSaque >= 100){
+            //calcular qtde de notas de 100 reais
+            numeroNotasCem = Math.floor(valorSaque/100);
+            resto = valorSaque%100;
+            console.log(`Notas de 100 = ${numeroNotasCem}`);
+            console.log(`Valor Restante = ${resto}`);
+            valorSaque = resto;
+        }
+        if(valorSaque >= 50){
+            numeroNotasCinquenta = Math.floor(valorSaque / 50);
+            resto = valorSaque %50;
+            console.log(`Notas de 50 = ${numeroNotasCinquenta}`);
+            console.log(`Valor Restante = ${resto}`);
+            valorSaque = resto;
+        }
+        if(valorSaque >= 20){
+            numeroNotasVinte = Math.floor(valorSaque / 20);    
+            resto = valorSaque % 20;
+            console.log(`Notas de 20 = ${numeroNotasVinte}`);
+            console.log(`Valor Restante = ${resto}`);
+            valorSaque = resto;
+        }
+       
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

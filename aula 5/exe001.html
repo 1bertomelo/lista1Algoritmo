@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var idadePessoa = 6;
+        //condição simples
+        //teste de unico valor com uma unica condicao
+        //for V ele faz o que ta no IF
+        //se for F ele faz o que ta no ELSE
+        //sintaxe da condição simples
+        //as condições elas sempre retornam de valor BOOLEANO:
+        //valor booleano é são V (true) ou F (false)
+        /*
+        console.log(idadePessoa >= 18);
+        if (idadePessoa >= 18) {
+            console.log(`Que a pessoa pode tirar carteira`);
+            console.log(`Eba sou maior idade`);
+        } else {
+            console.log(`Que pena você é menor idade`);
+        } */
+
+        //condições compostas
+        //nos podemos ter duas ou mais condições
+        //para gente ligar essas condições operadores lógicos E, OU e NAO
+        // verificar se o aluno foi aprovado ou reprovado
+        // aprovado seu eu obter nota >= 7 E frequencia >= 75
+        // na operação E lógico eu preciso satisfazer todas as condições
+        //se você nao obtiver uma das duas você é reprovado
+        //E logico - JS como &&
+        //OU , obter nota >= 7 OU frequencia >= 75 
+        //bastava o aluno ter um dos dois OU || 
+        //E e OU tem uma semantica diferente 
+        /*var mediaFinal = 10;
+        var frequenciaAluno = 50;
+        console.log(mediaFinal >= 7);// true
+        console.log(frequenciaAluno >= 75);//false
+        console.log(mediaFinal >= 7 && frequenciaAluno >= 75);
+        // true && false = false 
+        if (mediaFinal >= 7 && frequenciaAluno >= 75) {
+            console.log(`Aprovado`);
+        } else {
+            console.log(`Reprovado`);
+        }*/
+        var valorInteiro = 5;
+        //desafio escrever os nuemros por extenso
+        switch (valorInteiro) {
+            case 1: console.log(`Um`); break;
+            case 2: console.log(`Dois`); break;
+            case 3: console.log(`Três`); break;
+            default: console.log(`Outros valores`);// demais opcoes
+        }
+        //um paralelo do correspondente fazem a 
+        //mesma coisa
+        //nao necessariamente checa todas
+        if (valorInteiro === 1) {
+            console.log(`Um`);
+        } else {
+            if (valorInteiro === 2) {
+                console.log(`Dois`);
+            } else if (valorInteiro === 3) {
+                console.log(`Três`);
+            } else {
+                console.log(`Outros valores`);
+            }
+        }
+        //sempre de todas as condições
+        if (valorInteiro === 1)
+            console.log(`Um`);
+        if (valorInteiro === 2)
+            console.log(`Dois`);
+        if (valorInteiro === 3)
+            console.log(`Três`);
+        if (valorInteiro > 3) {
+            console.log(`Outros valores`);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
