@@ -13,12 +13,14 @@
         //sintaxe de um vetor (array)
         //um vetor vazio, tamanho 0
         var listaIdadesAluno = [];
+        //listaIdadesAluno[10] = 50; //inserção do valor na posicao diretamente
         listaIdadesAluno.push(36);//0
         listaIdadesAluno.push(18);//1
         listaIdadesAluno.push(19);//2
         listaIdadesAluno.push(30);//3
         listaIdadesAluno.push(20);//4
         listaIdadesAluno.push(17);//5
+        listaIdadesAluno[0] = 20;//atualizar o valor 
         console.log(listaIdadesAluno);
         console.log(`Tamanho do vetor é ${listaIdadesAluno.length}`);
         //quero saber qual é a maior idade da lista de alunos?
@@ -29,13 +31,7 @@
         var SomaIdade = 0;//acumulador
         console.log(`Antes de começar maior idade é ${maiorIdade}`);
         for (var posicao = 0; posicao < listaIdadesAluno.length; posicao++) {
-            if (maiorIdade < listaIdadesAluno[posicao]) {
-                maiorIdade = listaIdadesAluno[posicao];
-            }
-            if (menorIdade > listaIdadesAluno[posicao]) {
-                menorIdade = listaIdadesAluno[posicao];
-            }
-            SomaIdade += listaIdadesAluno[posicao];
+
             console.log(`Posicao ${posicao} valor = ${listaIdadesAluno[posicao]}`);
         }
         console.log(`No final maior idade é ${maiorIdade}`);

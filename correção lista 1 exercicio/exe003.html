@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var quantidadeHora = parseInt(window.prompt("Digite a quantidade de horas?"));
+        var nivelProfessor = parseInt(window.prompt("Digite qual o nível do profesor:"));
+        switch (nivelProfessor) {
+            case 1:
+                console.log(`O salário do professor de nível ${nivelProfessor} é ${12 * quantidadeHora}`);
+                break;
+            case 2:
+                console.log(`O salário do professor de nível ${nivelProfessor} é ${17 * quantidadeHora}`);
+                break;
+            case 3:
+                console.log(`O salário do professor de nível ${nivelProfessor} é ${25 * quantidadeHora}`);
+                break;
+            default:
+                console.log(`Nível ${nivelProfessor} não existe`);
+        }
+    </script>
+</body>
+
+</html>

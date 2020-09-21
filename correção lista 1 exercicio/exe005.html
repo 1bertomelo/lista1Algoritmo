@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alturaPessoa = parseFloat(window.prompt("Digite sua altura:"));
+        var sexo = window.prompt("Digite H para Homem e M para Mulher:");
+        switch (sexo) {
+            case "H":
+            case "h":
+                console.log(`O peso ideal para o Homem é ${(72.7 * alturaPessoa - 58).toFixed(2)}`);
+                break;
+            case "M":
+            case "m":
+                console.log(`O peso ideal para a Mulher é ${(62.1 * alturaPessoa - 44.7).toFixed(2)}`);
+                break;
+            default:
+                console.log(`Opção não encontrada`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var vetor1 = [];
+        var vetor2 = [];
+        var vetor3 = [];
+        var valorDigitado = 0;
+        for (var entradaVetor1 = 0; entradaVetor1 <= 9; entradaVetor1++) {
+            valorDigitado = parseInt(window.prompt(`Digite um valor para o vetor 1 na posição ${entradaVetor1}:`));
+            vetor1.push(valorDigitado);
+        }
+
+        for (var entradaVetor2 = 0; entradaVetor2 <= 9; entradaVetor2++) {
+            valorDigitado = parseInt(window.prompt(`Digite um valor para o vetor 2 na posição ${entradaVetor2}:`));
+            vetor2.push(valorDigitado);
+        }
+        console.log(vetor1);
+        console.log(vetor2);
+        //percorrer os elementos de um vetor  nomeArray[posicao]
+        for (var posicao = 0; posicao <= 9; posicao++) {
+            vetor3.push(vetor1[posicao] * vetor2[posicao]);
+        }
+        console.log(vetor3);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

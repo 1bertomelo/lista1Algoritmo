@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alturaChicoMetros = 1.5;
+        var alturaJucaMetros = 1.1;
+        var taxaCrescimentoChico = 0.02;
+        var taxaCrescimeentoJuca = 0.03;
+        var quantidadeAnos = 0;
+        while (alturaChicoMetros > alturaJucaMetros) {
+            alturaChicoMetros = alturaChicoMetros + taxaCrescimentoChico;
+            alturaJucaMetros = alturaJucaMetros + taxaCrescimeentoJuca;
+            quantidadeAnos++;
+        }
+        console.log(`Foram necessários ${quantidadeAnos} para Juca passar Chico`);
+    </script>
+</body>
+
+</html>

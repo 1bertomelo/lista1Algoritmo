@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numeroEntrada = parseInt(window.prompt("Digite um numero"));
+        var ePrimo = true;
+        var numeroAuxiliar = 2;
+
+        while ((numeroEntrada / 2) >= numeroAuxiliar) {
+            if (numeroEntrada % numeroAuxiliar === 0)
+                ePrimo = false;
+            numeroAuxiliar++;
+        }
+        if (ePrimo) console.log("É primo");
+        else console.log("Não é primo");
+    </script>
+</body>
+
+</html>

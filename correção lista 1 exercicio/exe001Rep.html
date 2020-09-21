@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var valorLimiteInferior = parseInt(window.prompt("Digite valor limite inferior:"));
+        var valorLimiteSuperior = parseInt(window.prompt("Digite valor limite superior:"));
+        var soma = 0;
+        while (valorLimiteInferior < valorLimiteSuperior) {
+            if (valorLimiteInferior % 2 == 0) {
+                soma += valorLimiteInferior;
+                console.log(`${valorLimiteInferior}`);
+            }
+            valorLimiteInferior++;
+        }
+        console.log(`Valor da soma é ${soma}`);
+    </script>
+</body>
+
+</html>

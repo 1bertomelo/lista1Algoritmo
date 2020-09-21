@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var contador = 1;
+        var quantidadeGraos = 1;
+        var somaTotalGraos = 0;
+
+        while (contador <= 64) {
+            somaTotalGraos += quantidadeGraos;
+            quantidadeGraos *= 2;
+            contador++;
+            console.log(somaTotalGraos);
+        }
+        console.log(`Soma total de grãos é ${somaTotalGraos}`);
+    </script>
+</body>
+
+</html>

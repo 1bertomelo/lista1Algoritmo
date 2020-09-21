@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alunoNota1 = parseFloat(window.prompt("Digite a primeira nota:"));
+        var alunoNota2 = parseFloat(window.prompt("Digite a segunda nota:"));
+        var alunoNota3 = parseFloat(window.prompt("Digite a terceira nota:"));
+        var mediaAluno = ((alunoNota1 + alunoNota2 + alunoNota3) / 3).toFixed(2);
+        if (mediaAluno >= 7) {
+            console.log(`Aluno aprovado com média ${mediaAluno}`);
+        } else {
+            if (mediaAluno <= 5) {
+                console.log(`Aluno reprovado com média ${mediaAluno}`);
+            } else {
+                console.log(`Aluno em recuperação, média final foi ${mediaAluno}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
