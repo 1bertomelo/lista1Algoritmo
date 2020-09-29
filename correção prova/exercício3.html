@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var quantidadeLata350ml = parseInt(window.prompt("Digite a quantidade de 350ml:"));
+        var quantidadeGarrafa600ml = parseInt(window.prompt("Digite a quantidade de 600ml:"));
+        var quantidadeGarrafa2litros = parseInt(window.prompt("Digite a quantidade de 2l:"));
+        
+        var total350mlEmLitros =  (quantidadeLata350ml * 350)/1000;
+        var total600mlEmLitros = (quantidadeGarrafa600ml*600)/1000;
+        var total2litros = (quantidadeGarrafa2litros*2);
+        var totalDeLitrosComprados = total350mlEmLitros + total600mlEmLitros +total2litros;
+
+        console.log(`Total comprado em litros é ${totalDeLitrosComprados}`);
+
+
+    </script>
+</body>
+</html>

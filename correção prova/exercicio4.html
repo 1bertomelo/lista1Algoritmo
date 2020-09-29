@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var notasDigitada = 0;
+        var arrayAprovados = [];
+        var arrayReprovados = [];
+        var arrayEmRecuperacao = [];
+        for(var contador =0; contador<10;contador++){
+            notasDigitada = parseFloat( window.prompt(`Digite a nota do aluno ${contador+1}`));
+            if(notasDigitada >= 7){
+                arrayAprovados.push(notasDigitada);
+            } else {
+                if(notasDigitada < 5){ 
+                    arrayReprovados.push(notasDigitada);
+                }
+                else {
+                    arrayEmRecuperacao.push(notasDigitada);
+                }
+            }
+        }
+        console.log(`A quantidade de aprovados ${arrayAprovados.length} `);
+        console.log(`A quantidade de reprovados ${arrayReprovados.length} `);
+        console.log(`A quantidade de em recuperação ${arrayEmRecuperacao.length} `);
+
+    </script>
+</body>
+</html>

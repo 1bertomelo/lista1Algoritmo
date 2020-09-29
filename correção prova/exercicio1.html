@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var precoProduto = parseFloat( window.prompt("Digite o preco do produto:"));
+        var condicaoPagamento = parseInt(window.prompt("Digite a forma de pagamento (1 à 4)"));
+        var valorDePagamento = 0;
+        switch (condicaoPagamento){
+            case 1:
+              //calculo 1
+              valorDePagamento = precoProduto * 0.90;
+              console.log(`A vista em dinheiro ou cheque, recebe 10% de desconto ${valorDePagamento}`);
+              break;
+            case 2:
+               valorDePagamento = precoProduto * 0.85;
+               console.log(`A vista no cartão de crédito, recebe 15% de desconto ${valorDePagamento}`);
+                //calculo 2
+                break;
+            case 3:
+                //calculo 
+                console.log(`Em duas vezes, preço normal de etqueta sem juros : ${precoProduto} `);
+                break;
+            case 4:
+                //calculo
+                valorDePagamento = precoProduto * 1.1;
+                console.log(`Em duas vezes, preço normal de etqueta mais juros de 10% : ${valorDePagamento.toFixed(2)} `);
+                break;
+            default :
+                console.log(`Opção inválida`);
+                break;                
+        }
+    </script>
+</body>
+</html>
