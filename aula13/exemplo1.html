@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // dados entrando nos algoritmos
+        //tipagem:
+        // inteiros: 0,1, 1000, ..
+        // reais, floats: 1.2 , 0.99 , 1000.99
+        // booleanos : true e false
+        // string: textos , palavras, numeros "1" != 1
+        //dinamica tipagem
+        //numeros operadores : + , - , * , ** , / , % ,...
+        //string operações realizar
+        // declara string o valor ta associado as Aspas;
+        var nomeAluno = "  Humberto Gustavo de Melo  ";
+        //tamanho de uma string.
+        console.log(nomeAluno);
+        console.log(nomeAluno.length);
+        //operador que replace --> substituição.
+        // o por um *
+        //propriedade x método (função)
+        //propriedade é uma informação -> tamanho de string.
+        //método é ação que a gente pode fazer. -> ação que eu posso fazer em string
+        /// sintaxe : replace("substituir",'valor final')
+        console.log(nomeAluno.replace('e', 'x'));
+        //percorrer uma string -> acessar letra a letra.
+        //string é um array de caracteres - cada letra
+        //string é um vetor de letras
+        var quantidadeDeAs = 0;
+        for (var contador = 0; contador < nomeAluno.length; contador++) {
+            if (nomeAluno[contador].toLowerCase() === 'a') {
+                quantidadeDeAs++;
+            }
+            console.log(nomeAluno[contador]);
+        }
+        console.log(`Quantidade de letras As ${quantidadeDeAs}`);
+        //coloca tudo maiusculo
+        console.log(nomeAluno.toUpperCase());
+        //coloca tudo minusculo
+        console.log(nomeAluno.toLowerCase());
+        //trim remover espaços de um string
+        console.log(nomeAluno.length);
+        console.log(nomeAluno.trim().length);
+        //substring recortar um pedaco da string.
+        //string de 11 caracteres codigo de acesso dos clientes.
+        //os 5 ultimos dgitos é o numero do sorteio.
+        //00000000000
+        //substring
+        console.log(nomeAluno.trim().substring(4, 10));
+        console.log(nomeAluno.toUpperCase().indexOf("E"));
+        console.log(nomeAluno.indexOf('e'));
+        //significar que nao existe na string -1
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

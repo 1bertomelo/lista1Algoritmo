@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //sintaxe 
+        //function nome da função(parametros){ assinatura nome + parametros
+        //        corpo funcao = o que ela faz
+        // produzir resultado 
+        // return + resultado
+        //}
+        function soma(x, y) {
+            return x + y;
+        }
+        //chamada da funcao o nome dela + os parametros
+        /*  console.log(soma(2, 3));
+          console.log(soma(20, 30));
+          console.log(soma(40, 50));*/
+
+        function aprovado(notaFinal) {
+            if (notaFinal >= 7)
+                return true;
+            return false;
+        }
+        var notaDigitada = 0;
+        for (var contador = 0; contador < 3; contador++) {
+            notaDigitada = parseFloat(window.prompt("Digite sua nota"));
+            console.log(aprovado(notaDigitada));
+        }
+        //deixar seu codigo mais organizado
+        //evitar duplicidade de codigo - reutilizacao
+
+
+
+
+
+        //transformar trecho em codigo em um bloco ele pode ser
+        //reutilizado.
+        //função
+
+
+    </script>
+</body>
+
+</html>
