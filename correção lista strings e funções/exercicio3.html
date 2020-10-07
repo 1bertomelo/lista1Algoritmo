@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        a. OK Tamanho mínimo de 8 caracteres
+        b. Tenha letras e números
+        c. Tenha caracteres especiais
+        d. Letras minúsculas maiúsculas
+        */
+        function verificaLetrasMinusculas(palavra) {
+            var alfabeto = "abcdefghijklmnopqrstuvwxyz";
+            for (var contador = 0; contador < palavra.length; contador++) {
+                if (alfabeto.indexOf(palavra[contador]) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function verificaLetrasMaiusculas(palavra) {
+            var alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            for (var contador = 0; contador < palavra.length; contador++) {
+                if (alfabeto.indexOf(palavra[contador]) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function verificaNumeros(palavra) {
+            var numeros = "0123456789";
+            for (var contador = 0; contador < palavra.length; contador++) {
+                if (numeros.indexOf(palavra[contador]) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+        function verificaCaracteresEspeciais(palavra) {
+            var caracteresEspeciais = "!@#$%&*+-";
+            for (var contador = 0; contador < palavra.length; contador++) {
+                if (caracteresEspeciais.indexOf(palavra[contador]) >= 0) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var senha = "h1berto@";
+        //regra 1:
+        if (senha.length < 8) {
+            console.log(`Senha inválida tamanho menor que 8`);
+        }
+        //regra 2: verificar se tem letras
+        var eMaiuscula = verificaLetrasMaiusculas(senha);
+        var eMinuscula = verificaLetrasMinusculas(senha);
+        var temNumero = verificaNumeros(senha);
+        //regra 3: verifica caracteres
+        var temCaracterEspecial = verificaCaracteresEspeciais(senha);
+
+        if (senha.length >= 8 && eMaiuscula && eMinuscula && temNumero && temCaracterEspecial) {
+            console.log(`Senha é forte ${senha}`);
+        } else {
+            console.log(`Senha é fraca ${senha}`);
+        }
+
+    </script>
+</body>
+
+</html>

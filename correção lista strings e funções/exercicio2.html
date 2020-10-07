@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Faça um algoritmo que dada uma palavra responda se essa palavra é um palíndromo
+         ou não.
+         ex.: arara , ana , ovo é
+         beto - oteb não
+         */
+        var palavraDigitada = "ovo";
+        var ePalindromo = true;
+        for (var contador = 0; contador < palavraDigitada.length; contador++) {
+            if (palavraDigitada[contador] !== palavraDigitada[palavraDigitada.length - 1 - contador]) {
+                ePalindromo = false;
+            }
+        }
+        if (!ePalindromo)  // ePalindromo === false
+            console.log("Não é palindromo")
+        else
+            console.log("É palíndromo");
+    </script>
+</body>
+
+</html>
