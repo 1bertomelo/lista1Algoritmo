@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="txtEntrada1" type="number" />
+    <input id="time1" name="times" value="Galo" type="radio" checked />Galo
+    <input id="time2" name="times" value="Zero" type="radio" />Zero
+
+    <label id="lblResultado"></label>
+    <label id="lblResultado2"></label>
+
+    <button id="btnResultado" onclick="calculo()">Resultado</button>
+    <script>
+        function calculo() {
+            var entrada1 = document.getElementById("txtEntrada1").value;
+            var resultado = document.getElementById("lblResultado");
+            resultado.innerHTML = `Resposta é ${entrada1 * 2}`;
+            var resultado2 = document.getElementById("lblResultado2");
+            var arrayTimes = document.getElementsByName("times");
+            console.log(arrayTimes);
+            for (var i = 0; i < arrayTimes.length; i++) {
+                if (arrayTimes[i].checked) {
+                    console.log("Escolheu: " + arrayTimes[i].value);
+                }
+            }
+            for (const elemento of arrayTimes) {
+                if (elemento.checked)
+                    console.log("Escolheu 2: " + elemento.value);
+            }
+        }
+    </script>
+</body>
+
+</html>
