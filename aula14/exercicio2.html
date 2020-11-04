@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <input id="txtNome" placeholder="Digite seu nome" />
+    <input id="txtPesoKg" placeholder="Digite seu peso em Kg" />
+    <input id="txtAlturaMetros" placeholder="Digite sua altura em M" />
+    <button onclick="resultadoIMC()">Calcular IMC</button>
+    <script>
+        function calcularIMC(peso, altura){
+            return peso / (altura **2);
+        }
+
+        function resultadoIMC(){
+            var pesoDigitadoKG = parseFloat( document.getElementById("txtPesoKg").value);
+            var alturaDigitadaMetros = parseFloat( document.getElementById("txtAlturaMetros").value);
+            var imc = calcularIMC(pesoDigitadoKG,alturaDigitadaMetros);         
+            if(imc < 18){
+                alert('Você abaixo do peso!');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
