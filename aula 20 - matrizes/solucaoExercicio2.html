@@ -11,15 +11,17 @@
     <input type="number" id="linha1Coluna0"  placeholder="[1,0]" />
     <input type="number" id="linha1Coluna1"  placeholder="[1,1]" /> <br /><br />
     <button onclick="calcularDeterminante()">Calcular Determinante</button>
-    
+    <p id="resposta"></p>
     <script>
 
         function calcularDeterminante(){
+            //declarou ela
             var matriz2x2 = [
             [0,0],
             [0,0]
             ];
-
+            //acessa os valores dessa matriz
+            //nomeMatriz[linha][coluna]
             matriz2x2[0][0] = parseInt(document.getElementById("linha0Coluna0").value);
             matriz2x2[0][1] = parseInt(document.getElementById("linha0Coluna1").value);
             matriz2x2[1][0] = parseInt(document.getElementById("linha1Coluna0").value);
@@ -27,6 +29,7 @@
 
             var determinante2x2 = matriz2x2[0][0]*matriz2x2[1][1]-matriz2x2[0][1]*matriz2x2[1][0];
             console.log(`O determinante é de ${determinante2x2}`);
+            document.getElementById("resposta").     = `O determinante é de ${determinante2x2}`;
         }
 
     </script>
