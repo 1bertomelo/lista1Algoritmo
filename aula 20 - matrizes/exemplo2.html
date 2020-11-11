@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .botoes {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button  id="teste1" class="botoes" onclick="jogar(this)"> ??? </button>
+    <button  id="teste2" class="botoes" onclick="jogar(this)"> ??? </button>
+    <button  id="teste3" class="botoes" onclick="jogar(this)"> ??? </button> <br /> <br />
+    <button  id="teste4" class="botoes" onclick="jogar(this)"> ??? </button>
+
+    <script>
+        function jogar(p){
+            console.log(p.innerHTML);
+            p.innerHTML='X';
+        }
+    </script>
+
+</body>
+</html>
