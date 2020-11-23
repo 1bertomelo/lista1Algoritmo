@@ -26,6 +26,7 @@
 <p id="jogador">Jogador X</p>
 <h3>Quantidade Jogadas</h3>
 <p id="qtdeJogadas">0</p>
+<h2 id="vencedor"></h2>
 <script>
     //declaração da matriz
     //posição inicial do jogo
@@ -37,18 +38,62 @@
     var qtdeJogadas=0;
     function jogar(botao){       
         var jogador = document.getElementById("jogador");
-        if(jogador.innerHTML === "Jogador X"){
-            botao.innerHTML = 'X';
-            jogador.innerHTML = "Jogador O";
-        } else {
-            botao.innerHTML = 'O';
-            jogador.innerHTML = "Jogador X";
+        var linha = 0;
+        var coluna = 0;
+        switch (botao.id) {
+            case "botao1": linha = 0; coluna = 0; break;
+            case "botao2": linha = 0; coluna = 1; break;
+            case "botao3": linha = 0; coluna = 2; break;
+            case "botao4": linha = 1; coluna = 0; break;
+            case "botao5": linha = 1; coluna = 1; break;
+            case "botao6": linha = 1; coluna = 2; break;
+            case "botao7": linha = 2; coluna = 0; break;
+            case "botao8": linha = 2; coluna = 1; break;
+            case "botao9": linha = 2; coluna = 2; break;            
         }
+        var simboloJogador = '';
+
+        if(jogador.innerHTML === "Jogador X"){
+            jogador.innerHTML = "Jogador O";
+            simboloJogador='X';
+        } else {
+            jogador.innerHTML = "Jogador X";
+            simboloJogador='O';
+        }
+        botao.innerHTML = simboloJogador;
+        botao.disabled = true;
+        insereMatriz(simboloJogador,linha,coluna);
         qtdeJogadas++;
         document.getElementById("qtdeJogadas").innerHTML = qtdeJogadas;
         
         //verificar se o jogo terminou?
+        if(
+           (matrizJogoVelha[0][0] ===  matrizJogoVelha[0][1] && matrizJogoVelha[0][0] ===  matrizJogoVelha[0][2] && matrizJogoVelha[0][2] !== '' ) ||
+           (matrizJogoVelha[1][0] ===  matrizJogoVelha[1][1] && matrizJogoVelha[1][0] ===  matrizJogoVelha[1][2] && matrizJogoVelha[1][2] !== '') ||
+           (matrizJogoVelha[2][0] ===  matrizJogoVelha[2][1] && matrizJogoVelha[2][0] ===  matrizJogoVelha[2][2] && matrizJogoVelha[2][2] !== '') ||
+           (matrizJogoVelha[0][0] ===  matrizJogoVelha[1][0] && matrizJogoVelha[0][0] ===  matrizJogoVelha[2][0] && matrizJogoVelha[2][0] !== '') ||
+           (matrizJogoVelha[0][1] ===  matrizJogoVelha[1][1] && matrizJogoVelha[0][1] ===  matrizJogoVelha[2][1] && matrizJogoVelha[2][1] !== '') ||
+           (matrizJogoVelha[0][2] ===  matrizJogoVelha[1][2] && matrizJogoVelha[0][2] ===  matrizJogoVelha[2][2] && matrizJogoVelha[2][2] !== '') ||
+           (matrizJogoVelha[0][0] ===  matrizJogoVelha[1][1] && matrizJogoVelha[0][0] ===  matrizJogoVelha[2][2] && matrizJogoVelha[2][2] !== '') ||
+           (matrizJogoVelha[2][0] ===  matrizJogoVelha[1][1] && matrizJogoVelha[2][0] ===  matrizJogoVelha[0][2] && matrizJogoVelha[0][2] !== '') 
+           
+           ) 
+           {
+               document.getElementById("vencedor").innerHTML = `Vencedor é o jogador ${simboloJogador}`;
+           }
+           else {
+            if(qtdeJogadas ===9){
+                document.getElementById("vencedor").innerHTML = `Deu velha`;   
+            }
+           }
 
+    }
+
+
+
+    function insereMatriz(pJogador, pLinha, pColuna){
+        matrizJogoVelha[pLinha][pColuna] = pJogador; 
+        console.table(matrizJogoVelha);
     }
 
 </script>

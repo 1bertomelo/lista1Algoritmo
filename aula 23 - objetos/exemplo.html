@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo objetos</h1>
+    <script>
+        // armazenar os dados de um professor
+        //nome, idade, instituicao trabalha, ano admissao
+        //elemento que eu representar o PROFESSOR = conjunto de caracteristcas
+        //criar um objeto = sintaxe  
+        //var nomeObjeto = { propriedade1 : valor1 , proprieade2 : valor 2  }...
+        var professor1 = {
+            nome : "Humberto Melo",
+            idade : 36,
+            instituicao : "Uniaraxa",
+            anoAdmissao : 2012
+        };
+        //acessar propriedade a sintaxe é objeto.Propriedade
+        console.log(`Nome do professor -> ${professor1.nome}`);
+        console.log(`Idade do professor -> ${professor1.idade}`);
+        console.log(`Instituicao do professor -> ${professor1.instituicao}`);
+        console.log(`Ano de admissao do professor -> ${professor1.anoAdmissao}`);
+        
+        var professor2 = {
+            nome : "Humberto Melo 2",
+            idade : 20,
+            instituicao : "Uniaraxa",
+            anoAdmissao : 2019
+        };
+        
+        //cria lista de professores = array
+        //conceito de objeto no JS = agrupar informações
+        var arrayProfessores = [];
+        arrayProfessores.push(professor1);
+        arrayProfessores.push(professor2);
+        console.log(arrayProfessores);
+
+        
+
+    </script>
+</body>
+</html>

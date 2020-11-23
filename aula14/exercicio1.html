@@ -15,7 +15,7 @@
     <input id="txtQuintoNumeroJogado"   type="number"  name="numerosJogados"  />
     <input id="txtSextoNumeroJogado"    type="number"  name="numerosJogados"  />
     <button onclick="realizarSorteio()">Jogar</button>
-
+   
     <script>
 
         function realizarSorteio(){
@@ -42,6 +42,11 @@
            }
            alert(`Você acertou ${arrayNumerosAcertados.length}`);
            console.log(`Você acertou os números ${arrayNumerosAcertados}`);
+           //
+           //mandar email para todos jogados com o resultado
+           enviarEmailJogadores();
+
+
 
         }
 
