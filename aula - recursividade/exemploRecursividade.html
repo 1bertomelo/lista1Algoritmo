@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calcularSomatorio()">Calcular Somatorio</button>
+    <button onclick="calcularFatorial()"> Calcular Fatorial</button>
+
+    <script>
+    //sintaxe
+        // n = 5 + 3 + 1 
+        //n = 5 5+ 4+ 3+ 2+ 1 (condicao de parada é 1)
+        //n = 10 , 10+9+8+7+.... + 2+ 1
+
+        function somatorioRecursivo(n){
+            //passo o caso base é 1
+            //PARAR A RECURSAOOOO
+            console.log(n);
+            if(n === 1){
+                return n;
+            }else {
+                //chamada recursiva chamar a propria funcao, somatorioRecursivo()
+                return n + somatorioRecursivo(n-1)
+            }
+        }
+
+        function fatorialRecursivo(fat){
+            console.log(fat);
+            if(fat === 1){
+                return 1;
+            }
+            else {
+                return fat * fatorialRecursivo(fat-1);
+            }
+        }
+
+        function calcularSomatorio(){
+            var entradaUsuario = 5;
+            var resultado = somatorioRecursivo(entradaUsuario);
+            alert(`O resultado do somatório é ${resultado}`);
+        }
+
+        
+        function calcularFatorial(){
+            var entradaUsuario = 5;
+            var resultado = fatorialRecursivo(entradaUsuario);
+            alert(`O resultado do fatorial é ${resultado}`);
+        }
+
+
+    </script>
+
+</body>
+</html>

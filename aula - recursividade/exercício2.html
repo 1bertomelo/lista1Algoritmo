@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="valorA" type="number" placeholder="Digite a" />
+    <input id="valorB" type="number" placeholder="Digite b" />    
+    <button onclick="calcularExponeniacao()">Calcular</button>
+
+    <script>
+        function exponenciacaoRecursiva(a,b){
+            //passo 1: condicao de parada ou caso base
+            console.log(`a = ${a} e b = ${b}`);
+            if( b=== 1){
+                return a;
+            }
+            return  a * exponenciacaoRecursiva(a,b-1);
+        }
+
+        function calcularExponeniacao(){
+            var valorA = parseInt( document.getElementById("valorA").value);
+            var valorB = parseInt( document.getElementById("valorB").value);
+            var resultado = exponenciacaoRecursiva(valorA,valorB);
+            alert(`O resultado é ${resultado}`);
+            
+        }
+
+
+    </script>
+
+</body>
+</html>
