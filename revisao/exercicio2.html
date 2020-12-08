@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="entradaN" type="number" placeholder="Digite N" />
+    <input id="entradaP" type="number" placeholder="Digite P" />
+    
+    <button onclick="calcularS()">Calcular</button>
+    <script>
+        function fatorialNaoRecursivo(n){
+            var fatorial = 1;
+            while(n > 1){                               
+                fatorial = fatorial * n;
+                n=n-1;//n--
+            }
+           return fatorial;//retornar o valor pra quem chamou
+        }
+
+        function calcularS(){
+            var valorN = parseInt( document.getElementById("entradaN").value);
+            var valorP =  parseInt( document.getElementById("entradaP").value);            
+
+            if(valorN < valorP){
+                alert('Entrada inválida valor de N deve ser maior que P');
+            }
+            else {
+                var fatorialN = fatorialNaoRecursivo(valorN);
+                var fatorialP = fatorialNaoRecursivo(valorP);
+                var fatorialN_P = fatorialNaoRecursivo(valorN-valorP);               
+                var valorS = fatorialN/ (fatorialP*fatorialN_P);
+                alert(`Resultado de S é ${valorS}`);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="quantidade" type="number" placeholder="Digite a quantidade" />
+    <button onclick="calcularSerie()">Calcular serie</button>
+    <script>
+        function somaSerie(n){
+            console.log(n);
+            var contador = 1;
+            var soma = 0;
+            var valor = 1000;
+            while(contador <= n){
+                if(valor%2 === 0){
+                    soma = soma + (valor / contador);
+                } else {
+                    soma = soma - (valor / contador);
+                }
+                valor = valor -3;
+                contador++; //contador = contador + 1
+                console.log(valor);
+            }
+            return soma;
+        }
+
+        function calcularSerie(){
+            var quantidadeDigitada = parseInt(document.getElementById("quantidade").value);
+            var resposta = somaSerie(quantidadeDigitada);
+            alert(resposta);
+        }
+
+    </script>
+</body>
+</html>
