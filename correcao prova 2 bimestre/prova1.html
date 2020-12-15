@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="qtCamisaPequena" type="number" placeholder="Pequenas" />
+    <input id="qtCamisaMedia" type="number" placeholder="Média" />
+    <input id="qtCamisaGrandes" type="number" placeholder="Grandes" />
+    <button onclick="totalVenda()">Calcular Total</button>
+    <script>
+        function totalVenda(){
+            var qtCamisaPequena = parseInt(document.getElementById("qtCamisaPequena").value);
+            var qtCamisaMedia = parseInt(document.getElementById("qtCamisaMedia").value);
+            var qtCamisaGrandes = parseInt(document.getElementById("qtCamisaGrandes").value);
+            var precoCamisaPequena = 10;
+            var precoCamisaMedia = 12;
+            var precoCamisaGrande = 15;
+            var total = precoCamisaPequena*qtCamisaPequena + qtCamisaMedia*precoCamisaMedia + precoCamisaGrande*qtCamisaGrandes;
+            alert(`Total é de ${total}`);
+
+        }
+
+
+
+    </script>
+</body>
+</html>

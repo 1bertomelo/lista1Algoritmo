@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="moeda10" type="number" placeholder="10 centavos" />
+    <input id="moeda25" type="number" placeholder="25 centavos" />
+    <input id="moeda50" type="number" placeholder="50 centavos" />
+    <input id="moeda1" type="number" placeholder="1 real" />
+    <button onclick="calcularTotal()" >Calcular Total Cofre</button>
+    <script>
+        function calcularTotal(){
+            var moeda10 = parseInt(document.getElementById("moeda10").value);
+            var moeda25 = parseInt(document.getElementById("moeda25").value);
+            var moeda50 = parseInt(document.getElementById("moeda50").value);
+            var moeda1 = parseInt(document.getElementById("moeda1").value);
+            var totalCofre = moeda10*0.1+ moeda25*0.25+moeda50*0.5+moeda1;
+            alert(`Total no cofre é de ${totalCofre}`);
+        }
+    </script>    
+</body>
+</html>

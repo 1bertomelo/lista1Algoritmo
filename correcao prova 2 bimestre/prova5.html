@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="emailUsuario" type="email" placeholder="Digite seu email" />
+    <button onclick="mascararEmail()">Mascarar Email</button>
+    <script>
+        function mascararEmail(){
+            var emailUsuario = document.getElementById("emailUsuario").value;
+            var letraAtual = "";
+            var emailFinal = "";
+            var posicaoArroba = emailUsuario.indexOf("@");
+            for(var i=0;i<emailUsuario.length;i++){
+                letraAtual = emailUsuario[i];
+                if(i>=2 && letraAtual != '@' && i < posicaoArroba){
+                    letraAtual = letraAtual.replace(letraAtual, '*');
+                }
+                emailFinal = emailFinal + letraAtual;
+            }
+            console.log(emailFinal);
+
+        }
+    </script>
+</body>
+</html>

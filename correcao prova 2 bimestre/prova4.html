@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="entradaN" type="number" placeholder="Valor N" />
+    <input id="entradaK" type="number" placeholder="Valor K" />
+    <button onclick="calcularPermutacao()">Calcular Permutacao</button>
+    <script>
+        function fatorial(N){
+            var resposta = 1;
+            while(N > 1){
+                resposta = resposta * N;
+                N = N - 1;
+            }
+            return resposta;
+        }
+
+        function permutacao(N, K){
+            var A = fatorial(N)/fatorial(N-K);
+            return A;
+        }
+
+        function calcularPermutacao(){
+            var entradaN = parseInt(document.getElementById("entradaN").value);
+            var entradaK = parseInt(document.getElementById("entradaK").value);
+            var resposta = permutacao(entradaN,entradaK);
+            alert(`Resposta é ${resposta}`);
+
+        }
+
+
+    </script>
+</body>
+</html>

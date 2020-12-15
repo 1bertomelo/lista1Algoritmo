@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function conversorCelsiusFahrenheit(tempCelsius){
+            return tempCelsius*1.8+32;
+        }
+
+        function conversorCelsiusKelvin(tempCelsius){
+            return tempCelsius + 273.15;
+        }
+
+        function mediaVetor(vetorTemperaturas){
+            var soma = 0;
+            for(var j = 0; j<vetorTemperaturas.length;j++){
+                soma = soma + vetorTemperaturas[j];
+            }
+            return soma/vetorTemperaturas.length;
+        }
+
+        var temperaturasCelsius = [];
+        var temperaturaFareh = [];
+        var temperaturaKelvin = [];
+        temperaturasCelsius.push(20);
+        temperaturasCelsius.push(30);
+        temperaturasCelsius.push(40);
+        temperaturasCelsius.push(10);
+        temperaturasCelsius.push(0);
+
+        var auxiliarFareh =0 ;
+        for(var i=0;i<temperaturasCelsius.length;i++){
+            console.log(temperaturasCelsius[i]);
+            auxiliarFareh = conversorCelsiusFahrenheit(temperaturasCelsius[i]);
+            temperaturaFareh.push(auxiliarFareh);
+        }
+        
+        var auxiliarKelvin = 0;
+        for (var i=0;i<temperaturasCelsius.length;i++){
+            auxiliarKelvin = conversorCelsiusKelvin(temperaturasCelsius[i]);
+            temperaturaKelvin.push(auxiliarKelvin);
+        }
+        console.log(temperaturasCelsius);
+        console.log(temperaturaFareh);
+        console.log(temperaturaKelvin);
+        console.log(mediaVetor(temperaturasCelsius));
+        console.log(mediaVetor(temperaturaFareh));
+        console.log(mediaVetor(temperaturaKelvin));
+        
+    </script>
+</body>
+</html>

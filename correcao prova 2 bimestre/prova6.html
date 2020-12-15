@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var matriz3x3 = [
+            [8,0,7],
+            [4,5,6],
+            [3,10,2]
+        ]
+
+        var somaLinha1 = matriz3x3[0][0] + matriz3x3[0][1] + matriz3x3[0][2];
+        var somaLinha2 = matriz3x3[1][0] + matriz3x3[1][1] + matriz3x3[1][2];
+        var somaLinha3 = matriz3x3[2][0] + matriz3x3[2][1] + matriz3x3[2][2];
+                 
+                  
+        var somaColuna1 = matriz3x3[0][0] + matriz3x3[1][0] + matriz3x3[2][0];
+        var somaColuna2 =  matriz3x3[0][1] + matriz3x3[1][1] + matriz3x3[2][1];
+        var somaColuna3 = matriz3x3[0][2] + matriz3x3[1][2] + matriz3x3[2][2];
+        
+        var diagonal1 =  matriz3x3[0][0] + matriz3x3[1][1]+ matriz3x3[2][2];
+        var diagonal2 =  matriz3x3[0][2] + matriz3x3[1][1]+ matriz3x3[2][0];
+         
+        if(somaLinha1 == somaLinha2 && somaLinha2==somaLinha3 && somaLinha3==somaColuna1 && somaColuna1==somaColuna2 &&
+        somaColuna2 == somaColuna3 && somaColuna3 == diagonal1 && diagonal1==diagonal2){
+            alert('matriz magica');
+        } else{
+            alert('não é magica');
+        }
+
+    </script>
+</body>
+</html>
